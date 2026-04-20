@@ -57,7 +57,7 @@ function carregar() {
         div.className = "tarefa";
 
         div.innerHTML = `
-            <strong><img src="./images/tarefaMain.gif"> ${tarefa.titulo}</strong><br>
+            <strong><img src=".assets/images/tarefaMain.gif"> ${tarefa.titulo}</strong><br>
             ${tarefa.descricao}<br><br>
             ${tarefa.data}<br><br>
             Status: <span class="status ${getClasseStatus(tarefa.status)}">${tarefa.status}</span>
