@@ -1,15 +1,22 @@
 
-html{font-size: 16px;}
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, 'Times New Roman';
     background: white;
     margin: 0;
     padding: 1.25rem;
+
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    min-height: 100vh;       
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -20,13 +27,13 @@ h1, h2 {
 
 main {
     flex: 1;
-    max-width: 40rem;
-    margin: auto;
+    max-width: 70rem;
     width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 header img, main img {
@@ -35,21 +42,41 @@ header img, main img {
 }
 
 .container {
-    max-width: 37.5rem;
+    max-width: 70rem;
+    width: 100%;
     margin: auto;
     padding: 1.25rem;
     border-radius: 0.75rem;
 }
 
-.form-section, .lista-section, .tarefa {
+.form-section {
     background: white;
     padding: 1.25rem;
     border-radius: 0.75rem;
+
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
-    text-align: center;
+}
+
+.lista-section {
+    gap: 1rem;
+    width: 100%;
+}
+
+#lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#lista li {
+    width: 100%;
 }
 
 input {
@@ -68,19 +95,26 @@ button {
     padding: 0.625rem;
     border-radius: 0.5rem;
     cursor: pointer;
-    width: 100%;
-    margin-top: 0.625rem;
+    display: block;
+    margin: 0.625rem auto;
+    width: auto;
     font-size: 1rem;
 }
 
-button:hover {background: greenyellow;}
+button:hover {
+    background: rgb(138, 219, 16);
+}
 
 .tarefa {
     background: whitesmoke;
-    border: 0.625rem solid #ddd;
-    padding: 0.625rem;
-    border-radius: 0.625rem;
-    margin-top: 0.625rem;
+    border: 0.2rem solid #ddd;
+    padding: 0.75rem;
+    border-radius: 0.6rem;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 }
 
 .status {
@@ -88,23 +122,23 @@ button:hover {background: greenyellow;}
     font-size: 0.95rem;
 }
 
-.pendente {color: orange;}
-.andamento {color: blue}
-.concluida {color: green}
+.pendente { color: orange; }
+.andamento { color: blue; }
+.concluida { color: green; }
 
-.btn-status{
+.btn-status {
     margin-top: 0.5rem;
     background: blue;
     font-size: 0.9rem;
 }
 
-.btn-status:hover {background: lightblue;}
-
-footer {
-    margin-top: 0.25rem;
-    padding-top: 0.025rem;
-    border-top: 0.0625rem solid white;
-    text-align: center;
-    padding: 0.25rem;
+.btn-status:hover {
+    background: lightblue;
 }
 
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: black;
+}
